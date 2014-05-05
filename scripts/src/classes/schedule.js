@@ -12,15 +12,26 @@ routely.schedule = function () {
 		/*
 		 * For getting schedule for a bus stop.
 		 */
-		_get = function (caller, container) {
+		_get = function (caller, list, container) {
 
 			var _stop = $(caller),
 				_id = _stop.attr("rel"),
 				_url = _api.getStop(_id);
 
-			container.html("<p><img src='images/ajax-loader.gif' alt='loading' /></p>");
+			if(_stop.hasClass("r-selected") === false) { 
 
-			_ajax.get(container, _url, null, _getDone);
+				_setSelection(_stop, list);
+				container.html("<p><img src='images/ajax-loader.gif' alt='loading' /></p>");
+				_ajax.get(container, _url, null, _getDone);
+			}
+		},
+
+		/*
+		 * For selecting the clicked stop.
+		 */
+		_setSelection = function (stop, list) {
+			list.removeClass("r-selected");
+			stop.addClass("r-selected");
 		},
 
 		/*

@@ -7,7 +7,7 @@ routely.stop = function () {
 	var _ajax = routely.ajax,
 		_api = routely.api,
 		_schedule = routely.schedule,
-		_templateStopHtml = "<li rel='{{id}}' class='js-stop r-stop' title='Click to see schedule from {{name}} to {{towards}}'>{{name}} <span>-</span> {{towards}}</li>",
+		_templateStopHtml = "<li rel='{{id}}' class='js-stop r-stop' title='Click to see schedule from {{name}} to {{towards}}'>{{name}} <span>to</span> {{towards}}</li>",
 		_templateStop = Handlebars.compile(_templateStopHtml),
 		_html = null,
 		
@@ -88,7 +88,7 @@ routely.stop = function () {
 
 			var _list = serviceContainer.find(".js-stop");
 			_list.on("click", function(){
-				_schedule.get(this, scheduleContainer);
+				_schedule.get(this, _list, scheduleContainer);
 			});
 		},
 

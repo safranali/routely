@@ -40,6 +40,7 @@
 	.r-stops {
 
 		height: 300px;
+
 		.r-map {
 			height: 100%;
 			border: 5px solid;
@@ -54,7 +55,11 @@
 				font-size: 12px;
 				padding:5px;
 					
-				li {
+				.r-stop {
+					&.r-selected {
+						color: @primary-color;
+					}
+
 					
 					border-bottom: 2px #eee solid;
 					height: 20px;

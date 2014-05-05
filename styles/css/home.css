@@ -66,17 +66,20 @@ red: #f22613
   font-size: 12px;
   padding: 5px;
 }
-.r-view .r-stops .r-services ul li {
+.r-view .r-stops .r-services ul .r-stop {
   border-bottom: 2px #eee solid;
   height: 20px;
   padding: 5px 0 0;
   cursor: pointer;
   border-bottom: 1px #eeeeee solid;
 }
-.r-view .r-stops .r-services ul li:hover {
+.r-view .r-stops .r-services ul .r-stop.r-selected {
+  color: #2ecc71;
+}
+.r-view .r-stops .r-services ul .r-stop:hover {
   border-bottom-color: #f22613;
 }
-.r-view .r-stops .r-services ul li:hover span {
+.r-view .r-stops .r-services ul .r-stop:hover span {
   color: #f22613;
 }
 .r-view .r-schedule ul {
