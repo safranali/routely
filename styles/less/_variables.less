@@ -1,0 +1,26 @@
+/**************************************************
+ **************       Variables      **************
+ **************************************************/
+
+/*
+yellow: #f5ab35
+green: #2ecc71
+red: #f22613
+*/
+@default-color: #6d6d6d;
+@primary-color: #2ecc71;
+@secondary-color: #f5ab35;
+@border-color: #f2f2f2;
+@border-hover-color: #f22613;
+@border-bottom-color: #eee;
+
+.border-mixin {
+	border-bottom: 2px #eee solid;
+	height: 20px;
+	padding: 5px 0;
+	cursor: pointer;
+	border-bottom: 1px @border-bottom-color solid;
+    &:hover {
+      border-bottom-color: @border-hover-color;
+    }
+}

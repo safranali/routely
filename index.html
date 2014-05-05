@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <meta name="description" content="A simple app for showing live departures for London bus stops.">
+        <meta name="author" content="Safran Ali">
+        <meta name="keywords" content="routely, bus, schedule, html5, less, grunt, jasmine, safranali, @safranali">
+        
+        <title>routely</title>
+
+        <!-- STYLES -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+        
+        <link rel="stylesheet" href="styles/default.min.css"/>
+        <!-- /STYLES -->
+        
+        <!-- Libraries -->
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyC-PvzeuDfeDjpP4viPBBWeRcGULuWHguk&sensor=false"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+        <!-- /Libraries -->
+        
+        <!-- SCRIPTS -->
+        <script type="text/javascript" src="scripts/default.min.js"></script>
+        <!-- /SCRIPTS -->
+        
+    </head>
+
+    <body>
+        <div class="r-container">
+            <div class="r-style-bar">
+                <div class="r-style-left"></div>
+                <div class="r-style-right"></div>
+            </div>
+            <div class="r-view">
+                <div class="r-main-heading r-row">
+                    routely
+                </div>
+                <div class="r-stops r-row">
+                    <div id="MapContainer" class="r-map r-col-50"></div>
+                    <div class="r-services r-col-50">
+                        <h4>Bus Stop</h4>
+                        <ul id="ServiceContainer"></ul>
+                    </div>
+                </div>
+                <div class="r-schedule r-row">
+                    <h4>Stop Schedule</h4>
+                    <ul id="ScheduleContainer"></ul>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function(){
+
+                // initialising app
+                var app = new routely.app();
+                app.init({
+                    mapContainerId: "#MapContainer",
+                    serviceContainerId: "#ServiceContainer",
+                    scheduleContainerId: "#ScheduleContainer"
+                });
+            });
+        </script>
+    </body>
+</html>
