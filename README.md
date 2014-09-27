@@ -15,7 +15,7 @@ And to see schedule for a bus top please click bus stop.
 Demo
 ====
 
-http://safranali.info/projects/routely/index.html
+http://safranali.com/projects/routely/index.html
 
 
 Author
@@ -23,4 +23,4 @@ Author
 
 Safran Ali
 * <a href="http://twitter.com/safranali">@safranali</a>
-* http://safranali.info
+* http://safranali.com
